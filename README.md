@@ -1,4 +1,4 @@
-> Link to a live version - [https://s.dsce.in/]
+> Link to a live version - https://s.dsce.in/
 
 **Url Shortener** is, as the name suggestes, a project to create shortened URLs.
 
