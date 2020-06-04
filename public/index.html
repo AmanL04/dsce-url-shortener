@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Livvic:300,400,500&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./css/elements.css" />
+  <link rel="stylesheet" href="./css/hamburger.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  
+  <!-- JS -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit-icons.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" 
+  integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+
+  <title>URL Shortener</title>
+</head>
+<body>
+  <section id="main-section">
+    <header>
+      <img src="./images/college_logo.png"/>
+      <h1>URL Shortener</h1>
+      
+      <div id="hamburger-menu">
+        <ul>
+          <li>New</li>
+          <li>Update</li>
+          <li>Search</li>
+          <!-- <li>About</li> -->
+        </ul>
+        <div id="hamburger">
+          <label>
+            <input type="checkbox">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="30" />
+              <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+              <path class="line--2" d="M0 50h70" />
+              <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+            </svg>
+          </label>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <h4 id="current-option"><img src="https://img.icons8.com/metro/26/000000/double-right.png"><span> Shorten New URL</span></h4>
+      <section id="new-update-search-url" class="new">
+        <input class="input_field hover_shadow" id="longUrl" type="text" placeholder="Enter Long URL">
+        <button id="submitUrl" class="btn" >Shorten URL</button>
+        <div class="horizontal-divider">
+          <img src="https://img.icons8.com/metro/26/000000/up--v2.png">
+          <h3>Optional Fields</h3>
+          <img src="https://img.icons8.com/metro/26/000000/up--v2.png">
+        </div>
+        <input class="input_field hover_shadow" id="shortUrl" type="text" placeholder="Enter Desired Short URL">
+        <input class="input_field hover_shadow" id="passwordUrl" type="password" placeholder="Enter Password">
+        <input class="input_field hover_shadow" id="passwordUrlUpdate" type="password" placeholder="Enter New Password">
+        <input class="input_field hover_shadow" id="shortUrlUpdate" type="text" placeholder="Enter New Short URL">
+        <!-- <textarea class="textarea_field" id="descriptionUrl" placeholder="Description" ></textarea> -->
+      </section>
+      <section id="result">
+        <div id="new-update-result" class="new">
+          <input id="shortenedResult" type="text" readonly class="input_field">
+          <div class="copy"><img src="https://img.icons8.com/metro/26/000000/copy.png"><span>Copied!</span></div>
+        </div>
+        <div id="search-result">
+          <h4><img src="https://img.icons8.com/metro/26/000000/double-right.png"><span> Search Results</h4>
+          <!-- <div class="search-results-list">
+            <div class="search-result-individual input_field hover_shadow">
+              <div class="search-result-short-url">Short URL <span>s.dsce.in/gcloud</span></div>
+              <div class="search-result-long-url">Long URL <span>https://www.google.com.sdjhfh h vsehfj gvsfjhdg khjs</span></div>
+              <div class="search-result-viewed-times-url">View Count <span>10</span></div>
+              <div class="search-result-searched-times-url">Search Count <span>20</span></div>
+            </div>
+          </div> -->
+          <div id="search-results-list" class="hover_shadow rounded_corners">
+            <table>
+              <thead>
+                <tr>
+                  <td>Short URL</td>
+                  <td>Long URL</td>
+                  <td>Views</td>
+                  <td>Searches</td>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="about">
+
+      </section> -->
+    </div>
+    <footer>
+<!--       <a href="http://s.dsce.in/feedback-form">Feedback</a> -->
+      <ul>
+        <li>All rights reserved.</li>
+        <li>&copy; DSCE, Bengaluru</li>
+      </ul>
+    </footer>
+  </section>
+</body>
+</html>
