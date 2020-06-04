@@ -4,7 +4,7 @@
 
 # Reason
 
-Url shortener was built to address the issue of not being able to know what seminars/webinars' traction among students in my college, DSCE. With the access to our own database, now we could run various analytics on the patterns of accessing various URLs and their real world outcomes.
+Url shortener was built to address the issue of not being able to know the traction for various events among students in our college, DSCE. With the access to our own database, now we can run various analytics on the patterns of accessing various URLs and map them to the real-world outcomes.
 
 # Features
 
