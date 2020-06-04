@@ -5,7 +5,7 @@ const express = require("express");
 const redirect = require("./routes/redirect");
 const apiRoutes = require("./routes/api-routes");
 const apiUpdateRoutes = require("./routes/api-update-routes");
-const PORT = Number(process.env.PRODUCTION === "true" ? process.env.PRO_PORT : process.env.DEV_PORT);
+const PORT = Number(process.env.NODE_ENV === "production" ? process.env.PRO_PORT : process.env.DEV_PORT);
 
 const app = express();
 

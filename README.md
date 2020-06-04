@@ -16,3 +16,13 @@ Url shortener was built to address the issue of not being able to know what semi
 # Documentation
 
 Will be added soon...
+
+# Environment Variables
+
+| ENV Variable | Usage                                                                     |
+| ------------ | ------------------------------------------------------------------------- |
+| NODE_ENV     | "production"/"development" to determine the state of the node application |
+| DEV_PORT     | Port for development environment                                          |
+| PRO_PORT     | Port for production environment                                           |
+| MONGO_URI_1  | MongoDB URI for production environment                                    |
+| MONGO_URI_2  | MongoDB URI for development environment                                   |

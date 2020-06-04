@@ -257,7 +257,6 @@ window.onload = function () {
 	function submitSearch() {
 		let searchString = longUrl.value.trim();
 		let searchResultsListBody = document.querySelector("#search-results-list tbody");
-		if (searchString == "") searchString = null;
 		axios
 			.get(`${protocol + "//" + domain}/api/search/${encodeURIComponent(searchString)}`)
 			.then((res) => {
