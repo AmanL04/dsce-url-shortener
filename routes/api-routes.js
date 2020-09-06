@@ -14,7 +14,7 @@ function regexifyString(string) {
 
 async function findUrlsAndUpdateTheirSearches(filters, searchString) {
 	const currentTime = new Date(Date.now());
-	let urls = await Url.find(filters, "-_id -password -removable").lean();
+	let urls = await Url.find(filters, "-password -removable").sort({ _id: -1 }).lean();
 	for (var url of urls) {
 		url.exact =
 			searchString === url.longUrl || searchString === url.shortUrl || searchString === url.description;
@@ -49,7 +49,7 @@ router.get("/search/:searchString", async (req, res) => {
 	}
 });
 
-router.get("/search", async (req, res) => {
+router.get("/search", async (_, res) => {
 	try {
 		let urls = await findUrlsAndUpdateTheirSearches({});
 		res.send(urls);
